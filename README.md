@@ -2,7 +2,7 @@
 
 # Music-World
 
-This application created in vue.js in an music info application where you can find information about all your favourite songs
+This application created with vue.js is an music info application where you can find information about all your favourite songs
 
 ## Requirements
 
