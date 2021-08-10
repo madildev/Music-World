@@ -98,42 +98,45 @@ export default {
 .music-section, .music-section1{
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  margin: 10px;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px 50px;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
 }
 .music-list , .music-list1{
   height: 350px;
   width: 250px;
   background-color: lightgray;
-  margin: 5px;
-  padding: 5px;
-  font-size: 20px;
-  text-align: left;
-  box-shadow: 5px 5px rgba(0,0,0,0.8);
+  font-size: 18px;
+  box-shadow: 10px 20px 20px gray;
   transition: 0.5s;
+  border-radius: 8px 8px 8px 8px;
 }
 .music-list:hover, .music-list1:hover{
-  transform: scale3d(1.2,1.25,1.25);
+  transform: scale3d(1.1,1.1,1.1);
 }
 .image-sec img, .image-sec1 img{
   width: 100%;
   height: 70%;
+  border-radius: 8px 8px 0 0;
 }
 @media screen and (max-width: 600px){
   .hello h1{
     font-size: 22px;
   }
   .music-section{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-gap: 15px 25px;
   }
   .music-section1{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px 20px;
   }
   .music-list, .music-list1{
-    height: 150px;
-    width: 100px;
+    height: 170px;
+    width: 120px;
     font-size: 12px;
     overflow: hidden;
   }

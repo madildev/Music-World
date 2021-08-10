@@ -53,14 +53,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .player{
     display: flex;
     height: 100vh;
     background-color: white;
-    
 }
-.player-content{
+.player-content {
     margin-right: 150px;
     margin-left: 50px;
 }
@@ -83,7 +82,7 @@ export default {
 }
 .song-pre{
     display: flex;
-    margin-top: 150px;
+    margin-top: 95px;
 }
 .song-pre embed{
    margin-left: 5px;
@@ -96,7 +95,7 @@ export default {
         margin: 50px;
     }
     .song-pre{
-        margin-top: 170px;
+        margin-top: 90px;
     }
 }
 </style>

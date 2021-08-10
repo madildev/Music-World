@@ -13,8 +13,10 @@
                     <router-link :to="{name: 'Player', params: {songid: data.key }}"><img :src="data.images.coverart" alt=""></router-link>
                 </div>
                 <!-- This is the router link go to the player component-->
-                <h3>{{data.title}}</h3>
-                <h4>{{data.subtitle}}</h4>
+                <div class="details">
+                   <h3>{{data.title}}</h3>
+                   <h4>{{data.subtitle}}</h4>
+                </div>
           </div>  
      </div>
     </div>
@@ -58,28 +60,38 @@ export default {
     margin: auto;
     padding: 10px;
 }
+.trend h1{
+  margin-left: 25px;
+  padding: 20px;
+}
 .header{
   margin-top: 20px;
   margin: auto;
-  padding-left: 250px;
 }
 .header input{
   height: 30px;
   width: 250px;
   color: black;
+  transform: translateX(500px);
 }
 .header button{
     font-size: 14px;
     padding: 5px;
     outline: none;
     margin: 4px;
+    transform: translateX(510px);
 }
 .music-section {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-content: center;
+  margin-left: 50px;
+
 }
 .music-section h3{
-    cursor: pointer;
+  cursor: pointer;
 }
 .music-section a{
     text-decoration: none;
@@ -88,32 +100,44 @@ export default {
 .music-list{
   height: 330px;  
   width: 250px;
+  border-radius: 8px 8px 8px 8px;
   background-color: lightgray;
-  margin: 8px;
-  box-shadow: 5px 5px rgba(0, 0,0, 0.8);
+  box-shadow: 10px 15px 20px gray;
   transition: 0.5s;
 }
 .music-list:hover{
- transform: scale3d(1.25,1.25,1.25);
+ transform: scale3d(1.1,1.1,1.1);
 }
-.image-sec img{
+.music-list .details{
+  padding: 0 15px;
+}
+.image-sec img
+{
  height: 70%;
  width: 100%;
+ border-radius: 8px 8px 0 0;
 }
 
 @media screen and (max-width: 700px){
   .header{
       padding-left: 100px;
   }
+  .header input{
+    transform: translateX(20px);
+  }
+  .header button{
+    transform: translateX(25px);
+  }
+
   .music-section {
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-left: 25px;
   }
-  .music-list{
-     height: 150px;
+  .music-list {
+     height: 170px;
      width: 100px;
-     font-size: 14px;
-     overflow: hidden; 
+     font-size: 12px;
   }
     
 }
